@@ -1,0 +1,118 @@
+// import noble, { Peripheral } from "@abandonware/noble";
+
+// const DE900_UUID = "fff0";
+// const DE900_LOCAL_NAME = "SDB-BT";
+// const CHAR_UUID = "8ec90003f3154f609fb8838830daea50";
+
+// let connectedPeripheral = null;
+
+// noble.on("stateChange", async (state) => {
+//   // possible state values: "unknown", "resetting", "unsupported", "unauthorized", "poweredOff", "poweredOn"
+//   if (state !== "poweredOn") {
+//     return;
+//   }
+
+//   console.log("ℹ️ Bluetooth ready...");
+//   await noble.startScanningAsync([DE900_UUID]);
+// });
+
+// noble.on("scanStart", () => {
+//   console.log("ℹ️ Bluetooth scan started...");
+// });
+
+// noble.on("scanStop", () => {
+//   console.log("ℹ️ Bluetooth scan stopped...");
+// });
+
+// noble.on("warning", (message: string) => {
+//   console.log("Warning", message);
+// });
+
+// noble.on("discover", async (peripheral) => {
+//   await noble.stopScanningAsync();
+
+//   peripheral.once("connect", async () => {
+//     console.log("🛜 Connected to:", peripheral.advertisement.localName);
+
+//     const services = await peripheral.discoverServicesAsync();
+
+//     for (const service of services) {
+//       console.log("Service:", service.uuid);
+
+//       const characteristics = await service.discoverCharacteristicsAsync();
+
+//       for (const characteristic of characteristics) {
+//         console.log("Characteristic:", characteristic.uuid);
+
+//         characteristic.on("data", (buffer) => {
+//           const arr = new Uint8Array(buffer);
+//           console.log("BUFFER ARRAY:", arr);
+
+//           const isSmallButtonPressed = arr[8] === 221 && arr[9] === 221;
+//           const isMissed = arr[8] === 238 && arr[9] === 238;
+//           const isBigButtonPressed = arr[8] === 255 && arr[9] === 255;
+//           const isDouble = arr[6] === 13;
+//           const isTriple = arr[6] === 11;
+//           const isSimple = arr[6] === 12 || arr[6] === 10;
+//           const unitValue = arr[7];
+//           const decimalValue = arr[8];
+//           const value = parseInt(`${decimalValue}${unitValue}`, 10);
+//           const isBullsEye = arr[7] === 0 && arr[8] === 14;
+//           const isDoubleBullsEye = arr[7] === 0 && arr[8] === 15;
+
+//           if (isSmallButtonPressed) {
+//             console.log("-------------------");
+//             console.log("Small button pressed");
+//             console.log("-------------------");
+//           } else if (isBigButtonPressed) {
+//             console.log("-------------------");
+//             console.log("Big button pressed");
+//             console.log("-------------------");
+//           } else if (isMissed) {
+//             console.log("-------------------");
+//             console.log("Missed the target");
+//             console.log("-------------------");
+//           } else if (isBullsEye) {
+//             console.log("-------------------");
+//             console.log("Hit the BullsEye", 25);
+//             console.log("-------------------");
+//           } else if (isDoubleBullsEye) {
+//             console.log("-------------------");
+//             console.log("Hit the Double BullsEye", 50);
+//             console.log("-------------------");
+//           } else if (isSimple) {
+//             console.log("-------------------");
+//             console.log("Hit the value:", value);
+//             console.log("-------------------");
+//           } else if (isDouble) {
+//             console.log("-------------------");
+//             console.log("Hit the value:", value * 2);
+//             console.log("-------------------");
+//           } else if (isTriple) {
+//             console.log("-------------------");
+//             console.log("Hit the value:", value * 3);
+//             console.log("-------------------");
+//           }
+//         });
+
+//         characteristic.subscribe(() => {
+//           console.log("Subscribed to characteristic:", characteristic.uuid);
+//         });
+//       }
+//     }
+//   });
+
+//   await peripheral.connectAsync();
+// });
+
+// const exitHandler = async () => {
+//   console.log("Exiting...");
+//   await noble.stopScanningAsync();
+//   noble.removeAllListeners();
+//   process.exit();
+// };
+
+// process
+//   .on("SIGINT", exitHandler)
+//   .on("SIGQUIT", exitHandler)
+//   .on("SIGTERM", exitHandler);
