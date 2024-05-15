@@ -3,11 +3,11 @@ import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BluetoothService } from './bluetooth/bluetooth.service';
+import { BluetoothModule } from './bluetooth/bluetooth.module';
 
 @Module({
-  imports: [CacheModule.register()],
+  imports: [CacheModule.register(), BluetoothModule],
   controllers: [AppController],
-  providers: [AppService, BluetoothService],
+  providers: [AppService],
 })
 export class AppModule {}
