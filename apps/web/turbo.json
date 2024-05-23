@@ -8,6 +8,9 @@
     "dev": {
       "dependsOn": ["codegen"]
     },
+    "types": {
+      "dependsOn": ["codegen"]
+    },
     "codegen": {
       "cache": true,
       "outputMode": "new-only",
