@@ -1,23 +1,12 @@
-import { type FC, useState } from 'react';
-import { ChakraBaseProvider } from '@chakra-ui/react';
+import { type FC } from 'react';
+
+import { ThemeProvider } from 'core/providers';
+import { Text } from 'core/atom';
 
 export const App: FC = () => {
-  const [count, setCount] = useState(0);
-
   return (
-    <ChakraBaseProvider>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </ChakraBaseProvider>
+    <ThemeProvider>
+      <Text size="">PiDart</Text>
+    </ThemeProvider>
   );
 };

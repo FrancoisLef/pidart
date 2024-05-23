@@ -8,6 +8,7 @@
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
+    "test": "turbo test",
     "types": "turbo types"
   },
   "devDependencies": {
