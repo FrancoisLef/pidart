@@ -11,7 +11,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "TZ=UTC vitest",
+    "test": "TZ=UTC vitest --watch=false",
     "types": "tsc --noEmit"
   },
   "dependencies": {

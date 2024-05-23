@@ -12,7 +12,6 @@
       "dependsOn": ["codegen"]
     },
     "codegen": {
-      "cache": false,
       "outputMode": "new-only",
       "outputs": ["src/types/chakra.d.ts"]
     }
