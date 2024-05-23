@@ -37,7 +37,7 @@ module.exports = {
           ['^\\u0000'], // Side effects imports
           ['^react', '^@?\\w'], // React first then packages imports
           ['^assets/?'], // Static assets (fonts)
-          // ['^core/?'], // Core components (design system)
+          ['^core/?'], // Core components (design system)
           // [
           //   // Order imports from src
           //   '^config/?',
