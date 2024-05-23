@@ -7,7 +7,8 @@
     "codegen": "turbo codegen",
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "lint": "turbo lint"
+    "lint": "turbo lint",
+    "types": "turbo types"
   },
   "devDependencies": {
     "eslint": "8.57.0",

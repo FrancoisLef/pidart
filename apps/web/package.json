@@ -10,7 +10,8 @@
     "dev": "vite --host",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "types": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/react": "2.8.2",
