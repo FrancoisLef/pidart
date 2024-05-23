@@ -10,7 +10,4 @@ export const semanticTokens = {
   fonts: {
     ...textTokens.fonts,
   },
-  fontWeights: {
-    ...textTokens.fontWeights,
-  },
 } satisfies ChakraTheme['semanticTokens'];

@@ -87,14 +87,6 @@ export const textTokens = {
       default: 'rubik',
     },
   },
-  fontWeights: {
-    medium: {
-      default: 'weight-500',
-    },
-    regular: {
-      default: 'weight-400',
-    },
-  },
 } satisfies ChakraTheme['semanticTokens'];
 
 export const textSizes = Object.keys(textTheme.sizes) as TextSize[];

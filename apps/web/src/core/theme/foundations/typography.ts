@@ -33,8 +33,8 @@ export const lineHeights = {
 } satisfies ChakraTheme['lineHeights'];
 
 export const fontWeights = {
-  'weight-400': 400,
-  'weight-500': 500,
+  regular: 400,
+  medium: 500,
 } satisfies ChakraTheme['fontWeights'];
 
 export const letterSpacings = {

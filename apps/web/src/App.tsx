@@ -6,7 +6,9 @@ import { Text } from 'core/atom';
 export const App: FC = () => {
   return (
     <ThemeProvider>
-      <Text size="">PiDart</Text>
+      <Text size="16" fontWeight="medium">
+        PiDart
+      </Text>
     </ThemeProvider>
   );
 };
