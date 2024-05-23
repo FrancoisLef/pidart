@@ -1,9 +1,8 @@
 {
   "name": "web",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "license": "MIT",
-  "author": "François Lefebvre",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
