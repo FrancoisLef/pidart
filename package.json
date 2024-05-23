@@ -14,5 +14,8 @@
     "prettier-plugin-packagejson": "2.5.0",
     "turbo": "1.13.3"
   },
-  "packageManager": "pnpm@8.9.0"
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "pnpm": "8.9.0"
+  }
 }
