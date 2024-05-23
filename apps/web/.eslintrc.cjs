@@ -1,18 +1,5 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-  ],
+  extends: ['@pidart/eslint-config/react'],
   root: true,
-  env: { browser: true, es2020: true },
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
-  },
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.ts'],
 };
