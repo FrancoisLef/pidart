@@ -1,5 +1,5 @@
-import { type Peripheral as Device } from '@abandonware/noble';
 import { Logger } from '@nestjs/common';
+import { type Peripheral as Device } from '@stoprocent/noble';
 
 export class Peripheral {
   private readonly logger = new Logger(Peripheral.name);

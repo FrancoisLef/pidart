@@ -1,10 +1,11 @@
-import noble, { type Peripheral as Device } from '@abandonware/noble';
 import {
   Injectable,
   Logger,
   type OnModuleDestroy,
   type OnModuleInit,
 } from '@nestjs/common';
+import * as noble from '@stoprocent/noble';
+import { type Peripheral as Device } from '@stoprocent/noble';
 
 import { DE900_NAME } from './bluetooth.constants';
 import { type BluetoothState } from './bluetooth.types';

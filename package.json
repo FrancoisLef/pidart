@@ -1,5 +1,5 @@
 {
-  "name": "pidart",
+  "name": "@pidart/repo",
   "private": true,
   "scripts": {
     "build": "turbo build",
