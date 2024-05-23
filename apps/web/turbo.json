@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": ["//"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["codegen"]
+    },
+    "dev": {
+      "dependsOn": ["codegen"]
+    },
+    "codegen": {
+      "cache": true,
+      "outputMode": "new-only",
+      "outputs": ["src/types/chakra.d.ts"]
+    }
+  }
+}

@@ -6,16 +6,22 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
+    "codegen": "chakra-cli tokens --strict-token-types --strict-component-types --template augmentation --out src/types/chakra.d.ts src/core/theme/index.ts",
     "dev": "vite --host",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "2.8.2",
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "framer-motion": "11.2.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "2.4.1",
     "@pidart/eslint-config": "workspace:*",
     "@types/react": "18.2.66",
     "@types/react-dom": "18.2.22",

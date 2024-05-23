@@ -9,7 +9,7 @@ export default defineConfig({
   },
   clearScreen: false,
   server: {
-    open: true,
+    // open: true,
     port: 8080,
   },
 });

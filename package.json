@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "turbo build",
+    "codegen": "turbo codegen",
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint"
