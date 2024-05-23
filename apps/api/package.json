@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
-    "debug": "nest start --debug --watch",
-    "dev": "nest start --watch",
+    "debug": "nest start --debug --watch --preserveWatchOutput",
+    "dev": "nest start --watch --preserveWatchOutput",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "start": "node dist/main",
     "test": "jest",

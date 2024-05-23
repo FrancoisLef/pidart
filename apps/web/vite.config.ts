@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
+  clearScreen: false,
   server: {
-    host: 'localhost',
     open: true,
     port: 8080,
   },
