@@ -4,12 +4,19 @@
  * @type {import("eslint").Linter.Config}
  */
 module.exports = {
-  plugins: ['@typescript-eslint/eslint-plugin', 'simple-import-sort'],
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    'sort-keys-fix',
+    'simple-import-sort',
+  ],
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
   rules: {
+    /**
+     * TypeScript ESLint
+     */
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -26,7 +33,14 @@ module.exports = {
         fixMixedExportsWithInlineTypeSpecifier: true,
       },
     ],
+    /**
+     * Simple Import Sort
+     */
     'simple-import-sort/imports': 'warn',
     'simple-import-sort/exports': 'warn',
+    /**
+     * Sort Keys Fix
+     */
+    'sort-keys-fix/sort-keys-fix': 'warn',
   },
 };

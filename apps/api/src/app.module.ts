@@ -6,8 +6,8 @@ import { AppService } from './app.service';
 import { BluetoothModule } from './bluetooth/bluetooth.module';
 
 @Module({
-  imports: [CacheModule.register(), BluetoothModule],
   controllers: [AppController],
+  imports: [CacheModule.register(), BluetoothModule],
   providers: [AppService],
 })
 export class AppModule {}

@@ -1,10 +1,15 @@
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
+import tsPaths from 'vite-tsconfig-paths';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tsPaths()],
+  build: {
+    sourcemap: true,
+  },
   server: {
+    host: 'localhost',
     open: true,
+    port: 8080,
   },
 });

@@ -30,5 +30,28 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'simple-import-sort/imports': [
+      'warn',
+      {
+        groups: [
+          ['^\\u0000'], // Side effects imports
+          ['^react', '^@?\\w'], // React first then packages imports
+          ['^assets/?'], // Static assets (fonts)
+          // ['^core/?'], // Core components (design system)
+          // [
+          //   // Order imports from src
+          //   '^config/?',
+          //   '^types/?',
+          //   '^helpers/?',
+          //   '^hooks/?',
+          //   '^providers/?',
+          //   '^theme/?',
+          //   '^pages/?',
+          //   '^components/?',
+          // ],
+          ['^../', '^./'],
+        ],
+      },
+    ],
   },
 };
