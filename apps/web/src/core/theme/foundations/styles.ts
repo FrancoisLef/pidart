@@ -16,12 +16,5 @@ export const styles = {
     'b, strong': {
       fontWeight: 'medium',
     },
-    body: {
-      // backgroundColor: 'app-body-bg',
-      color: 'text-primary',
-      fontFamily: 'body',
-      fontSize: 'font-16',
-      letterSpacing: 'spacing-0',
-    },
   },
 } satisfies ChakraTheme['styles'];

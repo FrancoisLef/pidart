@@ -1,14 +1,12 @@
 import { type FC } from 'react';
 
 import { ThemeProvider } from 'core/providers';
-import { Text } from 'core/atom';
+import { Text } from '@chakra-ui/react';
 
 export const App: FC = () => {
   return (
     <ThemeProvider>
-      <Text size="16" fontWeight="medium">
-        PiDart
-      </Text>
+      <Text>Hello world</Text>
     </ThemeProvider>
   );
 };

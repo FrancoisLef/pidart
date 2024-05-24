@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from 'react';
-import { ChakraBaseProvider } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 
 import RubikMediumTtf from 'assets/fonts/Rubik-Medium.ttf';
@@ -18,7 +18,7 @@ export const ThemeProvider: FC<PropsWithChildren<ThemeProviderProps>> = ({
   children,
 }) => {
   return (
-    <ChakraBaseProvider theme={theme}>
+    <ChakraProvider theme={theme}>
       <Global
         styles={`
         @font-face {
@@ -40,6 +40,6 @@ export const ThemeProvider: FC<PropsWithChildren<ThemeProviderProps>> = ({
       />
 
       {children}
-    </ChakraBaseProvider>
+    </ChakraProvider>
   );
 };
